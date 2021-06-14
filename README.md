@@ -1,2 +1,10 @@
-# katas
-Collection of Code Katas I have Implemented
+# Katas
+
+This repository contains my implementation of some code katas.
+
+## Build
+
+```bash
+go build
+go test
+```

@@ -7,7 +7,7 @@ This repository contains my implementation of some code katas.
 To run all test suites in the root folder
 
 ```bash
-go run github.com/onsi/ginkgo/ginkgo -r
+ginkgo -r
 ```
 
 ## Overview of Implemented Katas

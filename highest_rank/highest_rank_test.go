@@ -6,6 +6,7 @@ import (
 	. "github.com/onsi/ginkgo/extensions/table"
 	. "github.com/onsi/gomega"
 	"github.com/wonderbird/katas/highest_rank"
+	"testing"
 )
 
 var _ = Describe("Tests", func() {
@@ -58,6 +59,20 @@ var _ = Describe("Tests", func() {
 		})
 	})
 })
+
+var benchmarkInput = []int{4, 1, 8, 46, 7, 0, 13, 47, 1, 13, 23, 91, 13, -56, 12, 0}
+
+func BenchmarkHighestRank(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		highest_rank.HighestRank(benchmarkInput)
+	}
+}
+
+func BenchmarkAlternativeSolution(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		highest_rank.AlternativeSolution(benchmarkInput)
+	}
+}
 
 func RunTestForBothSolutions(input []int, expected int) {
 	RunTestForHighestRank(input, expected)

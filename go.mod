@@ -7,3 +7,5 @@ require (
 	github.com/onsi/gomega v1.13.0
 	github.com/wonderbird/katas v0.0.0-20210616054026-e0296e3e26a5
 )
+
+replace github.com/wonderbird/katas v0.0.0-20210616054026-e0296e3e26a5 => ../katas

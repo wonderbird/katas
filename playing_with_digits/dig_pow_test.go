@@ -3,7 +3,7 @@ package playing_with_digits_test
 import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	"github.com/wonderbird/katas/playing_with_digits"
+	"highest_rank/playing_with_digits"
 )
 
 func dotest(n, p int, exp int) {

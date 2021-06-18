@@ -1,4 +1,4 @@
-# Highest Rank Number in an Array
+# Highest Rank Number in an Array (6 kyu)
 
 Source: [Codewars: Highest Rank Number in an Array](https://www.codewars.com/kata/5420fc9bb5b2c7fd57000004)
 

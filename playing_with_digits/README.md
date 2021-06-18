@@ -1,4 +1,4 @@
-# Playing With Digits
+# Playing With Digits (6 kyu)
 
 Source: [Codewars: Playing With Digits](https://www.codewars.com/kata/5552101f47fc5178b1000050)
 

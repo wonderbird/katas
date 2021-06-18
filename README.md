@@ -18,7 +18,3 @@ Run all benchmarks from the root folder
 ```bash
 go test -bench=. ./...
 ```
-
-## Overview of Implemented Katas
-
-* [Highest Rank](highest_rank) - 6 kyu, Fundamentals, Arrays, Objects.

@@ -16,7 +16,7 @@ var _ = Describe("Test DigPow", func() {
 
 	DescribeTable("Inconclusive cases using n = 0",
 		dotest,
-		FEntry("0, 0 => -1 (undefined: 0^0)", 0, 0, -1),
+		Entry("0, 0 => -1 (undefined: 0^0)", 0, 0, -1),
 		Entry("0, 1 => -1 (inconclusive: 0^1 = 0 = 1 * 0 = ... * 0)", 0, 1, -1),
 		Entry("0, 5 => -1 (inconclusive: 0^5 = 0 = 1 * 0 = ... * 0)", 0, 5, -1),
 	)
@@ -40,7 +40,7 @@ var _ = Describe("Test DigPow", func() {
 		Entry("89, 1 => 1  (8^1 + 9^2 = 89 < 1*89)", 89, 1, 1),
 	)
 
-	PIt("(codewars) should handle basic cases", func() {
+	It("(codewars) should handle basic cases", func() {
 		dotest(92, 1, -1)
 		dotest(695, 2, 2)
 		dotest(46288, 3, 51)

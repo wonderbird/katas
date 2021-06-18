@@ -21,13 +21,13 @@ func DecodeWord(morseCode string) string {
 
 	splitCodes := strings.Split(morseCode, " ")
 	for _, code := range splitCodes {
-		decoded += MorseCodes[code]
+		decoded += MORSE_CODE[code]
 	}
 
 	return decoded
 }
 
-var MorseCodes = map[string]string{
+var MORSE_CODE = map[string]string{
 	".-":        "A",
 	"-...":      "B",
 	"-.-.":      "C",

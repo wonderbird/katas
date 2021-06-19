@@ -1,7 +1,7 @@
 package decode_morse_code_2
 
 import (
-	"github.com/wonderbird/katas/decode_morse_code_1"
+	"github.com/wonderbird/katas-in-go/decode_morse_code_1"
 )
 
 // You may get original char by morse code like this: MORSE_CODE[char]

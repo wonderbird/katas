@@ -5,7 +5,7 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/ginkgo/extensions/table"
 	. "github.com/onsi/gomega"
-	. "github.com/wonderbird/katas/decode_morse_code_2"
+	. "github.com/wonderbird/katas-in-go/decode_morse_code_2"
 )
 
 var _ = Describe("DecodeBits", func() {

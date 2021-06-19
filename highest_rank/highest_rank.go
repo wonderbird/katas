@@ -45,14 +45,14 @@ func HighestRank(nums []int) int {
 // Benchmark results on my machine:
 //   goos: darwin
 //   goarch: amd64
-//   pkg: github.com/wonderbird/katas/highest_rank
+//   pkg: github.com/wonderbird/katas-in-go/highest_rank
 //   cpu: Intel(R) Core(TM) i7-6920HQ CPU @ 2.90GHz
 //   BenchmarkHighestRank
 //   BenchmarkHighestRank-8           	 5364417	       221.8 ns/op
 //   BenchmarkAlternativeSolution
 //   BenchmarkAlternativeSolution-8   	 1326914	       900.7 ns/op
 //   PASS
-//   ok  	github.com/wonderbird/katas/highest_rank	3.682s
+//   ok  	github.com/wonderbird/katas-in-go/highest_rank	3.682s
 func AlternativeSolution(nums []int) int {
 	frequencyByNumber := map[int]int{}
 

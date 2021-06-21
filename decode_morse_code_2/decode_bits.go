@@ -3,6 +3,7 @@ package decode_morse_code_2
 import (
 	"github.com/wonderbird/katas-in-go/decode_morse_code_1"
 	"math"
+	"strings"
 )
 
 // You may get original char by morse code like this: MORSE_CODE[char]
@@ -12,9 +13,9 @@ type CodeLengthPair struct {
 }
 
 func DecodeBits(bits string) string {
-	codeLengths := convertBitsToCodeLengthPairs(bits)
-	codeLengths = trimZeros(codeLengths)
+	trimmedBits := strings.Trim(bits, "0")
 
+	codeLengths := convertBitsToCodeLengthPairs(trimmedBits)
 	timeUnit := findLengthOfShortestZeroBurst(codeLengths)
 	morseCode := convertCodeLengthPairsToMorseCode(codeLengths, timeUnit)
 
@@ -22,7 +23,7 @@ func DecodeBits(bits string) string {
 }
 
 func convertBitsToCodeLengthPairs(bits string) (codeLengths []CodeLengthPair) {
-	currentCode := '0'
+	currentCode := '1'
 	currentLength := 0
 
 	for _, bit := range bits {
@@ -43,18 +44,6 @@ func convertBitsToCodeLengthPairs(bits string) (codeLengths []CodeLengthPair) {
 	})
 
 	return
-}
-
-func trimZeros(codeLengths []CodeLengthPair) []CodeLengthPair {
-	if codeLengths[0].Code == '0' {
-		codeLengths = codeLengths[1:]
-	}
-
-	numCodeWords := len(codeLengths)
-	if codeLengths[numCodeWords-1].Code == '0' {
-		codeLengths = codeLengths[:numCodeWords-1]
-	}
-	return codeLengths
 }
 
 func findLengthOfShortestZeroBurst(codeLengths []CodeLengthPair) int {
